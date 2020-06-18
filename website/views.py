@@ -6,3 +6,6 @@ def home(request):
 
 def login(request):
 	return render(request, 'login.html', {})
+
+def qrform(request):
+	return render(request, 'qrform.html', {})
