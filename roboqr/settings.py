@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'roboqr.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/3.0/r  ef/settings/#databases
 
 DATABASES = {
     'default': {
