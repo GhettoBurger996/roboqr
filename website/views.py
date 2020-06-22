@@ -22,3 +22,6 @@ def qrform(request):
 
 	else:
 		return render(request, 'qrform.html', {})
+
+def dashboard(request):
+	return render(request, 'dashboard.html', {})
