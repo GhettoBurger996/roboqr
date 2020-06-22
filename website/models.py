@@ -1,5 +1,5 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
+#from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
@@ -9,7 +9,7 @@ class Company(models.Model):
 	company_logo = models.FileField()
 	company_email = models.EmailField(max_length=50)
 	company_password = models.CharField(max_length=50)
-	company_number = PhoneNumberField()
+	company_number = models.CharField(max_length=50)
 
 	# Addres
 	company_address = models.CharField(max_length=200)
@@ -17,12 +17,16 @@ class Company(models.Model):
 	company_country = models.CharField(max_length=200)
 	company_state = models.CharField(max_length=200)
 
+	def __str__(self):
+		return self.company_name + ' ' + self.company_email
 
 class QRScanMember(models.Model):
 
 	first_name = models.CharField(max_length=50)
 	last_name = models.CharField(max_length=50)
-	contact_number = PhoneNumberField()
-	temperature = models.FloatField()
+	contact_number = models.CharField(max_length=50)
+	temperature = models.CharField(max_length=50)
 	purpose_of_visitation = models.CharField(max_length=50)
 
+	def __str__(self):
+		return self.first_name + ' ' + self.last_name + ' ' + self.contact_number

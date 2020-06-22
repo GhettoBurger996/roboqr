@@ -1,12 +1,5 @@
-{% extends 'base.html' %}
-
 <h1> Registered Database</h1>
 
 {% for member in all%}
-	{{member.first_name}} {{member.last_name}}
-	Phone Number: {{member.email}}<br/>
-	Temperature: {{member.temperature}}<br/>
-	Purpose of Visitation: {{member.purpose_of_visitation}}<br/><br/>
-	
-	<hr>
+	<p>{{member}}</p>
 {% endfor %}

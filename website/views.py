@@ -10,7 +10,8 @@ def login(request):
 	return render(request, 'login.html', {})
 
 def register(request):
-	return render(request, 'register.html', {})
+	all_members = QRScanMember.objects.all
+	return render(request, 'register.html', {'all': all_members})
 
 def qrform(request):
 	if request.method == "POST":
