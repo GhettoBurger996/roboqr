@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime, date
 #from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
@@ -25,6 +26,8 @@ class QRScanMember(models.Model):
 	full_name = models.CharField(max_length=50)
 	contact_number = models.CharField(max_length=50)
 	temperature = models.CharField(max_length=50)
+	time_stamp = models.TimeField(auto_now=False, auto_now_add=True, blank=True)
+	date_stamp = models.DateField(auto_now=False, auto_now_add=True, blank=True)
 
 	def __str__(self):
 		return self.full_name + ' ' + self.contact_number + ' ' + self.temperature
