@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import *
+from .models import QRScanMember
 from .qrform import MemberQRForm
 
 # Create your views here.

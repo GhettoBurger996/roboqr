@@ -29,37 +29,21 @@
 			<form method="POST" class="form-detail" action="{% url 'qrform' %}" id="myform">
 			{% csrf_token %}
 				<h2>REGISTER FORM</h2>
-				<div class="form-group">
-					<div class="form-row form-row-1">
-						<label for="first_name">First Name</label>
-						<input type="text" name="first_name" id="first_name" class="input-text" required>
-					</div>
 
-					<div class="form-row form-row-1">
-						<label for="last_name">Last Name</label>
-						<input type="text" name="last_name" id="last_name" class="input-text" required>
-					</div>
+				<div class="form-row">
+					<label for="full_name">First Name</label>
+					<input type="text" name="full_name" id="full_name" class="input-text" required>
 				</div>
-
 
 				<div class="form-row">
 					<label for="contact_number">Phone Number</label>
 					<input type="text" name="contact_number" id="contact_number" class="input-text" required>
 				</div>
 
-
-				<div class="form-group">
-					<div class="form-row form-row-1 ">
-						<label for="temperature">Temperature</label>
-						<input type="text" name="temperature" id="temperature" class="input-text" required>
-					</div>
-
-					<div class="form-row form-row-1">
-						<label for="purpose_of_visitation">Purpose of Visitation</label>
-						<input type="text" name="purpose_of_visitation" id="purpose_of_visitation" class="input-text" required>
-					</div>
+				<div class="form-row">
+					<label for="temperature">Temperature</label>
+					<input type="text" name="temperature" id="temperature" class="input-text" required>
 				</div>
-
 
 				<div class="form-checkbox">
 					<label class="container"><p>I agree to the <a href="#" class="text">Terms and Conditions</a></p>

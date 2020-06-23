@@ -22,11 +22,9 @@ class Company(models.Model):
 
 class QRScanMember(models.Model):
 
-	first_name = models.CharField(max_length=50)
-	last_name = models.CharField(max_length=50)
+	full_name = models.CharField(max_length=50)
 	contact_number = models.CharField(max_length=50)
 	temperature = models.CharField(max_length=50)
-	purpose_of_visitation = models.CharField(max_length=50)
 
 	def __str__(self):
-		return self.first_name + ' ' + self.last_name + ' ' + self.contact_number
+		return self.full_name + ' ' + self.contact_number + ' ' + self.temperature
