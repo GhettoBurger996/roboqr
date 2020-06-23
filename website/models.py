@@ -1,6 +1,9 @@
 from django.db import models
 from datetime import datetime, date
+from django.core.validators import RegexValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 #from phonenumber_field.modelfields import PhoneNumberField
+#from phonenumber_field.formfields import PhoneNumberField
 
 # Create your models here.
 
@@ -19,15 +22,15 @@ class Company(models.Model):
 	company_state = models.CharField(max_length=200)
 
 	def __str__(self):
-		return self.company_name + ' ' + self.company_email
+		return self.company_name
 
 class QRScanMember(models.Model):
 
 	full_name = models.CharField(max_length=50)
 	contact_number = models.CharField(max_length=50)
-	temperature = models.CharField(max_length=50)
+	temperature = models.FloatField(validators=[MinValueValidator(35), MaxValueValidator(40)])
 	time_stamp = models.TimeField(auto_now=False, auto_now_add=True, blank=True)
 	date_stamp = models.DateField(auto_now=False, auto_now_add=True, blank=True)
 
 	def __str__(self):
-		return self.full_name + ' ' + self.contact_number + ' ' + self.temperature
+		return self.full_name 
