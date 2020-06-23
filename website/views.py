@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import QRScanMember
+from .models import *
 from .qrform import MemberQRForm
 
 # Create your views here.
@@ -27,4 +27,5 @@ def dashboard(request):
 	return render(request, 'dashboard.html', {})
 
 def dashboard_table(request):
-	return render(request, 'dashboard_table.html', {})
+	members = QRScanMember.objects.all()
+	return render(request, 'dashboard_table.html', {'members': members})
