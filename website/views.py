@@ -25,3 +25,6 @@ def qrform(request):
 
 def dashboard(request):
 	return render(request, 'dashboard.html', {})
+
+def dashboard_table(request):
+	return render(request, 'dashboard_table.html', {})
