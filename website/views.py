@@ -24,7 +24,11 @@ def qrform(request):
 		return render(request, 'qrform.html', {})
 
 def dashboard(request):
-	return render(request, 'dashboard.html', {})
+	members = QRScanMember.objects.all()
+
+	total_members = members.count()
+
+	return render(request, 'dashboard.html', {'total_members' : total_members})
 
 def dashboard_table(request):
 	members = QRScanMember.objects.all()

@@ -5,3 +5,4 @@ class MemberQRForm(ModelForm):
 	class Meta:
 		model = QRScanMember
 		fields = ['full_name', 'contact_number', 'temperature']
+
