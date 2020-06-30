@@ -69,12 +69,14 @@ WSGI_APPLICATION = 'roboqr.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demo',
-        'USER': 'robopreneur',
-        'PASSWORD': 'robo123456789',
-        'HOST':'database-1.cqtgq20xgpqv.ap-southeast-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'demo',
+        #'USER': 'robopreneur',
+        #'PASSWORD': 'robo123456789',
+        #'HOST':'database-1.cqtgq20xgpqv.ap-southeast-1.rds.amazonaws.com',
+        #'PORT': '5432',
     }
 }
 
@@ -127,12 +129,12 @@ django_heroku.settings(locals())
 
 
 # S3 Bucket Config
-AWS_ACCESS_KEY_ID = 'AKIA54DQFLYPGVOBMDGR'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'robopreneur'
+#AWS_ACCESS_KEY_ID = 'AKIA54DQFLYPGVOBMDGR'
+#AWS_SECRET_ACCESS_KEY = '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'
+#AWS_STORAGE_BUCKET_NAME = 'robopreneur'
 
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#AWS_S3_FILE_OVERWRITE = False
+#AWS_DEFAULT_ACL = None
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
