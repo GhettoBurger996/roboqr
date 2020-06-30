@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -37,24 +36,46 @@
                 <div class="col-md-4 col-md-offset-4">
                     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Register User</h3>
+                            <h3 class="panel-title">Register</h3>
                         </div>
                         <div class="panel-body">
-                            <form role="form">
+                            <form method="POST" action="">
+                            {% csrf_token %}
                                 <fieldset>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                        <input class="form-control" placeholder="Company Name" type="text" name="company_name" id="company_name" required>
                                     </div>
+
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                        <input class="form-control" placeholder="Company Email" name="company_email" id="company_email" type="input-text" required>
                                     </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                        </label>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company Password" name="company_password" id="company_password" type="input-text" required>
                                     </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company Number" name="company_number" id="company_number" type="input-text" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company Address" name="company_address" id="company_address" type="input-text" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company Post Code" name="company_post_code" id="company_post_code" type="input-text" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company Country" name="company_country" id="company_country" type="input-text" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Company State" name="company_state" id="company_state" type="input-text" required>
+                                    </div>
+
                                     <!-- Change this to a button or input when using this as a form -->
-                                    <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                    <input type="submit" href="register.html" class="btn btn-lg btn-success btn-block" name="register" class="register" value="Submit">
                                 </fieldset>
                             </form>
                         </div>

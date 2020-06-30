@@ -9,7 +9,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class Company(models.Model):
 	# Info
 	company_name = models.CharField(max_length=50)
-	company_logo = models.FileField()
 	company_email = models.EmailField(max_length=50)
 	company_password = models.CharField(max_length=50)
 	company_number = models.CharField(max_length=50)

@@ -6,6 +6,7 @@ urlpatterns = [
     path('home.html', views.home, name="home"),
     path('login.html', views.login, name="login"),
     path('qrform.html', views.qrform, name="qrform"),
+    path('register.html', views.register, name="register"),
     path('dashboard.html', views.dashboard, name="dashboard"),
     path('dashboard_table.html', views.dashboard_table, name="dashboard_table"),
 ]
