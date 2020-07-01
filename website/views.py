@@ -15,6 +15,9 @@ def home(request):
 def login(request):
 	return render(request, 'login.html', {})
 
+def confirmation(request):
+	return render(request, 'confirmation.html', {})
+
 def register(request):
 	form = CreateComapnyForm()
 

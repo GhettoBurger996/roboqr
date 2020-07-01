@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('home.html', views.home, name="home"),
     path('login.html', views.login, name="login"),
+    path('confirmation.html', views.confirmation, name="confirmation"),
     path('qrform.html', views.qrform, name="qrform"),
     path('register.html', views.register, name="register"),
     path('dashboard.html', views.dashboard, name="dashboard"),
